@@ -20,9 +20,6 @@ public class Polus extends GeographicObject implements GeoObject{
         private final int size;
 
         public IceBerg(int temp){
-            if (temp <= 0){
-                throw new InvalidParameterRuntimeException();
-            }
             this.size = (int)Math.sqrt(-temp);
             System.out.println("Создан айсберг размера " + size);
             showMirage();
