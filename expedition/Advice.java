@@ -23,7 +23,8 @@ public final class Advice {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Advice advice = (Advice) o;
-        return getPoint() == advice.getPoint();
+        return Objects.equals(getPoint(), advice.getPoint()) &&
+                material == advice.material;
     }
 
     @Override
